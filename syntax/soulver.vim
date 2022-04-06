@@ -14,6 +14,9 @@ set cpo&vim
 syn match   soulComment "\v#.*$"
 hi def link soulComment Comment
 
+syn keyword soulConditions if then else
+hi def link soulConditions Conditional
+
 syn keyword soulUnits
             \ s sec min h Days Weeks Months Years ms µs ns
             \ m metres km kilometres cm centimetres mm millimetres µm micrometres nm nanometres in ft yd mi fur ly NM ftm
@@ -54,17 +57,26 @@ syn match   soulNumber      "\v<0x\x+(\.)@!>"
 hi def link soulNumber Number
 
 " operators
-syntax match potionOperator "\v\*"
-syntax match potionOperator "\v/"
-syntax match potionOperator "\v\+"
-syntax match potionOperator "\v-"
-syntax match potionOperator "\v\?"
-syntax match potionOperator "\v\*\="
-syntax match potionOperator "\v/\="
-syntax match potionOperator "\v\+\="
-syntax match potionOperator "\v-\="
+syntax match soulOperator "\v\*"
+syntax match soulOperator "\v/"
+syntax match soulOperator "\v\+"
+syntax match soulOperator "\v-"
+syntax match soulOperator "\v\?"
+syntax match soulOperator "\v\*\="
+syntax match soulOperator "\v/\="
+syntax match soulOperator "\v\+\="
+syntax match soulOperator "\v-\="
 
-highlight link potionOperator Operator
+highlight link soulOperator Operator
+
+syntax match soulComparators "\v\>"
+syntax match soulComparators "\v\<"
+syntax match soulComparators "\v\>\="
+syntax match soulComparators "\v\<\="
+syntax match soulComparators "\v\=\="
+syntax match soulComparators "\v\!\="
+
+highlight link soulComparators Operator
 
 
 let &cpo = s:save_cpo
