@@ -15,8 +15,20 @@ syn match   soulComment "\v#.*$"
 hi def link soulComment Comment
 
 syn keyword soulUnits
-            \ s sec secs min mins hrs hour hours day days week weeks month months year years ms us µs ns
-            \ m metre metres km kilometre kilometres cm centimetre centimetres
+            \ s sec min h Days Weeks Months Years ms µs ns
+            \ m metres km kilometres cm centimetres mm millimetres µm micrometres nm nanometres in ft yd mi fur ly NM ftm
+            \ m² m^2 m2 km² km^2 km2 cm² cm^2 cm2 mm² mm^2 mm2 µm² µm^2 µm2 in² sqin in^2 in2 ft² sqft ft^2 ft2 yd² sqyd yd^2 yd2 mi² sqmi mi^2 mi2 ac ha Ares
+            \ L liters litres kL ML mL m³ m3 m^3 km³ km3 km^3 cm³ cm3 cm^3 mm³ mm3 mm^3 cup in³ in3 in^3 ft³ cuft ft³ ft3 ft^3 yd³ yd³ cuyd yd3 yd^3 mi³ mi³ mi3 mi^3 miles miles^3 fl oz Pints Cups tsp tbsp qt gal af bsh
+            \ g kg mg ng t oz lb st ton ct
+            \ °C ºC C degC celcius °F ºF F degF fahrenheit
+            \ w kW MW GW TW mW hp
+            \ m/s km/h mph kn
+            \ B bit YB ZB EB PB TB GB MB kB Yb Zb Eb Pb Tb Gb Mb kb YiB ZiB EiB PiB TiB GiB MiB KiB Yib Zib Eib Pib Tib Gib Mib Kib
+            \ Bps bps YBps ZBps EBps PBps TBps GBp MBp KBp Ybps Zbps Ebps Pbp Tbp Gbp Mbp Kbp YiBps ZiBps EiBps PiBps TiBps GiBps MiBps KiBps Yibps Zibps Eibps Pibps Tibps Gibps Mibps Kibps
+            \ px Em Pt
+            \ hz kHz MHz GHz THz mHz µHz nHz
+            \ J kJ MJ GJ cal kCal Ws Wm Wh kWh MWh GWh TWh
+            \ rad
 hi def link soulUnits Identifier
 
 " months and days
