@@ -41,6 +41,7 @@ function! soulver3#Soulver()
     :setlocal buftype=nofile
     :setlocal bufhidden=hide
     :setlocal noswapfile
+    :setlocal filetype=soulver
 
     :call append(0, repeat([''], l:nb_empty_lines))
     :call append(l:nb_empty_lines, l:soulver_res)
