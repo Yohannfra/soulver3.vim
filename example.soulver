@@ -13,3 +13,5 @@ price in USD
 June 9 + 5 weeks
 
 35% of 500
+
+if price > 12 then poor = 1 else poor = 0
