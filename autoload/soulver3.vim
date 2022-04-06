@@ -27,7 +27,7 @@ function! soulver3#Soulver()
         return
     endif
     if s:CheckSoulver3Install() == 0
-        echoerr "Basic calculus with soulver gave wrong result, check your installation"
+        echoerr "Basic calculation with soulver gave wrong result, check your installation"
         return
     endif
 
