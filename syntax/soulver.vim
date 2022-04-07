@@ -25,6 +25,8 @@ syn keyword soulUnits
             \ g kg mg ng t oz lb st ton ct
             \ °C ºC C degC celcius °F ºF F degF fahrenheit
             \ w kW MW GW TW mW hp
+            \ ohm ohms
+            \ A mA mAh
             \ m/s km/h mph kn
             \ B bit YB ZB EB PB TB GB MB kB Yb Zb Eb Pb Tb Gb Mb kb YiB ZiB EiB PiB TiB GiB MiB KiB Yib Zib Eib Pib Tib Gib Mib Kib
             \ Bps bps YBps ZBps EBps PBps TBps GBp MBp KBp Ybps Zbps Ebps Pbp Tbp Gbp Mbp Kbp YiBps ZiBps EiBps PiBps TiBps GiBps MiBps KiBps Yibps Zibps Eibps Pibps Tibps Gibps Mibps Kibps
