@@ -37,22 +37,36 @@ function! soulver3#Soulver()
 
     let l:nb_empty_lines = s:CountLineToOffset(l:file_content)
 
-    :vnew
-    :setlocal buftype=nofile
-    :setlocal bufhidden=hide
-    :setlocal noswapfile
-    :setlocal filetype=soulver
-    :setlocal nonumber norelativenumber
+    let l:currentWindow=winnr()
+
+    if ! bufexists("SoulverViewBuffer")
+        :vnew
+        :setlocal buftype=nofile
+        :setlocal bufhidden=hide
+        :setlocal noswapfile
+        :setlocal filetype=soulver
+        :setlocal nonumber norelativenumber
+        :file SoulverViewBuffer
+    else
+        exe l:currentWindow . "wincmd l"
+        :%delete
+    endif
 
     :call append(0, repeat([''], l:nb_empty_lines))
     :call append(l:nb_empty_lines, l:soulver_res)
     :d
+    exe l:currentWindow . "wincmd h"
 endfunction
 
 function! soulver3#LiveOn()
-    echo "Enabling soulver live mode (TODO)"
+    call soulver3#Soulver()
+    augroup SoulverVimAutocomandGroup
+        autocmd TextChanged,TextChangedP,TextChangedI *.soulver :call soulver3#Soulver()
+    augroup END
 endfunction
 
 function! soulver3#LiveOff()
-    echo "Disabling soulver live mode (TODO)"
+    augroup SoulverVimAutocomandGroup
+        autocmd!
+    augroup END
 endfunction

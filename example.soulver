@@ -1,17 +1,22 @@
 # Example file
 
-1 + 3
+1 + 7 + 12
 
-price = 1 EUR + 4 EUR
+12 + 351
+
+price = 2 EUR + 7 EUR
 
 price in USD
 
-12 m to cm + 45 mm
+14 m to cm + 45 cm
 
 3k USD / 5 people
 
-June 9 + 5 weeks
+June 12 + 8 + 33 weeks
 
-35% of 500
+38% of 500 + 861 + 12
 
-if price > 12 then poor = 1 else poor = 0
+bat_cap = 1000 mAh
+conso = 200 mA
+
+bat_cap / conso as h
