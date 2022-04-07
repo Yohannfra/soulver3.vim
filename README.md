@@ -2,9 +2,9 @@
 
 soulver3.vim lets you use vim / neovim as a front end to [Soulver 3](https://soulver.app/)
 
-# Screenshot
+# Demo
 
-![screenshot](.github/screenshot.png)
+![demo](.github/gif_demo_soulver_vim.gif)
 
 
 # Installation
@@ -31,6 +31,12 @@ let g:soulver_cli_path = "path/to/your/soulver/cli"
 
 # Usage
 
+### Live mode
+1. Create a file and run **:SoulverLiveOn** to start Soulver mode
+2. type in all the things you would usually with the regular Soulver app
+3. To end the session type **:SoulverLiveOff**
+
+### Basic mode
 1. Create a file with the **.soulver** extension and type in all the things you would usually with the regular Soulver app
 2. call **:Soulver** to show the result of what you wrote
 
