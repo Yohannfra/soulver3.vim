@@ -36,6 +36,10 @@ syn keyword soulUnits
             \ rad
 hi def link soulUnits Identifier
 
+syn keyword soulUtilsWords
+            \ in as of
+hi def link soulUtilsWords Keyword
+
 " months and days
 syn keyword soulMonthsAndDays
             \ monday tuesday wednesday thursday friday saturday sunday
