@@ -12,3 +12,9 @@ let g:soulver_cli_path = get(g:, 'soulver_cli_path', "'/Applications/Soulver\ 3.
 command! Soulver :call soulver3#Soulver()
 command! SoulverLiveOn :call soulver3#LiveOn()
 command! SoulverLiveOff :call soulver3#LiveOff()
+
+let g:soulver_update_on_save = get(g:, 'soulver_update_on_save', 1)
+
+if g:soulver_update_on_save == 1
+    autocmd BufWritePost *.soulver :call soulver3#Soulver()
+endif
