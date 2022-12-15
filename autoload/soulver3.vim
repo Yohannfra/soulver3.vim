@@ -34,19 +34,21 @@ function! soulver3#Soulver()
     let l:file_content = getline(1,'$')
     let l:file_content_str = join(l:file_content, "\n")
     let l:soulver_res = systemlist("echo '" . l:file_content_str . "' | " . g:soulver_cli_path)
+    let l:file_name = expand('%:t:r')
+    let l:soulver_buf_name = l:file_name . "_SoulverViewBuffer"
 
     let l:nb_empty_lines = s:CountLineToOffset(l:file_content)
 
     let l:currentWindow=winnr()
 
-    if ! bufexists("SoulverViewBuffer")
+    if bufwinid(l:soulver_buf_name) == -1
         :vnew
         :setlocal buftype=nofile
         :setlocal bufhidden=hide
         :setlocal noswapfile
         :setlocal filetype=soulver
         :setlocal nonumber norelativenumber
-        :file SoulverViewBuffer
+        :exe "file " . l:soulver_buf_name
     else
         exe l:currentWindow . "wincmd l"
         :%delete
