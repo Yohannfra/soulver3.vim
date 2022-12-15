@@ -15,6 +15,8 @@ command! SoulverLiveOff :call soulver3#LiveOff()
 
 let g:soulver_update_on_save = get(g:, 'soulver_update_on_save', 1)
 
+autocmd FileType soulver setlocal commentstring=#\ %s
+
 if g:soulver_update_on_save == 1
     autocmd BufWritePost *.soulver :call soulver3#Soulver()
 endif
