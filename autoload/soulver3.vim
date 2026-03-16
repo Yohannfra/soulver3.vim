@@ -3,7 +3,7 @@
 
 function! s:CheckSoulver3Install()
     let l:basic_calc = " 21 + 21"
-    let l:res = system(g:soulver_cli_path . l:basic_calc)
+    let l:res = system('echo'.l:basic_calc.' | '. g:soulver_cli_path)
     return l:res == "42\n"
 endfunction
 

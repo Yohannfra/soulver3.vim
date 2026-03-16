@@ -9,12 +9,12 @@ soulver3.vim lets you use vim / neovim as a front end to [Soulver 3](https://sou
 
 # Installation
 
-1. Install Soulver from the official [website](https://soulver.app/)
+```bash
+$ brew install soulver-cli
+```
 
-2. Check if you have the CLI binary of Soulver, by default it's at: \
-**/Applications/Soulver\ 3.app/Contents/MacOS/CLI/soulver**
-
-If you don't find there or somewhere on your system follow [this guide to install it](https://documentation.soulver.app/documentation/command-line-tool-automator-and-services)
+The CLI is also included in the official app available at website and on the App Store.
+In this case the CLI will be located here: /Applications/Soulver 3.app/Contents/MacOS/CLI/soulver.
 
 3. Install **soulver3.vim** with your favorite plugin manager
 
